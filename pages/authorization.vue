@@ -27,14 +27,16 @@
         placeholder="Ввведите пароль"
       )
 
-    .flex.my-3
-      input(
-        type="checkbox"
-      )
+    .flex.y_center.my-3
+      span
+        input(
+          type="checkbox"
+        )
+        | Запомнить
 
-      button Войти
-
-    .button Регистрация
+      button.btn_blue Войти
+    .flex
+      button.btn_green Регистрация
 
 </template>
 
