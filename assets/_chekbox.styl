@@ -12,7 +12,7 @@ input[type='checkbox'], input[type='radio']
   cursor: pointer;
   height: $size;
   width: $size !important;
-  margin: 0 0.5em;
+  margin-right: 0.5em;
   background-color: #FFF;
 
   &:checked
@@ -31,7 +31,8 @@ input[type=checkbox]
   border-radius: 0.2em;
 
   &:checked
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke-width="3" stroke="#000" d="M3,7 L7,11 L13,4"/></svg>');
+    background: #FFF url('~static/icon-svg/input-checkbox-check.svg') no-repeat center;
+    // background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke-width="3" stroke="#000" d="M3,7 L7,11 L13,4"/></svg>');
 
 input[type=radio]
   border-radius: 50%;
