@@ -22,15 +22,49 @@
           )
 
 
-      table.my-3.table_hovered
-        tr
-          each _,i in Array(5)
-            th thead_#{i+1}
-        each _,i in Array(12)
-          tr
-            each _,i in Array(5)
-              td data_#{i+1}
+        .flex
 
+          table.my-3.table_hovered
+            tr
+              each _,i in Array(5)
+                th thead_#{i+1}
+            each _,i in Array(12)
+              tr
+                each _,i in Array(5)
+                  td data_#{i+1}
+
+          .ml-5
+
+            h2.my-3 Роль: Администратор
+            .flex
+              label Системное имя
+                input(
+                  placeholder="Админ"
+                )
+
+              label.ml-3 Наименование
+                input(
+                  placeholder="Администратор"
+                )
+
+
+            .flex
+              label Дата начала
+                input
+
+              label.ml-5 Дата окончания 
+                input
+
+
+
+            table.my-3.table_hovered
+              tr
+                each _,i in Array(3)
+                  th thead_#{i+1}
+              each _,i in Array(5)
+                tr
+                  each _,i in Array(3)
+                    td data_#{i+1}
 
 
 </template>
