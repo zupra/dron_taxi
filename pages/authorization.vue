@@ -1,8 +1,6 @@
 /*
 <template lang="pug">
 .Page
-  
-
   img(
     :src="require(`~/static/img/flying-taxi.jpg`)"
   )
@@ -10,15 +8,13 @@
 */
 
 <template lang="pug">
-
-//- .authorization
-//-   h1 HELLO authorization
-.Page
+.Page.flex
+  .authorization
 
   .Logo DRON TAXI
 
 
-  form.m-3
+  form
     h2 АВТОРИЗАЦИЯ
 
     label Логин
@@ -31,7 +27,7 @@
         placeholder="Ввведите пароль"
       )
 
-    .flex
+    .flex.my-3
       input(
         type="checkbox"
       )
@@ -50,6 +46,9 @@
 
 .authorization
   position fixed
+  z-index -1
+  left 0
+  top 0
   width 100%
   height 100vh
   background url('~static/img/flying-taxi.jpg') no-repeat center/cover;
@@ -60,5 +59,6 @@
 
 
 form
+  margin auto 0 auto 2em
   width 300px
 </style>

@@ -1,5 +1,5 @@
 <template lang="pug">
-.m-5
+.Index.p-5
 
   #palette
     each clr in ['#00BFFF','#0087B4', '#7FFF7FD9', '#7FFF7F', '#128312', '#202020', '#D1D9D1', '#747272', '#800080', '#991199', '#973E95', '#AD66A9', '#CEC8C8', '#747272' ]
@@ -54,6 +54,10 @@ export default {
 </script>
 
 <style lang="stylus">
+
+.Index
+  background #FFFF
+
 
 #palette
   display flex
