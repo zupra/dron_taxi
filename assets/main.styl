@@ -7,8 +7,13 @@
   font: 100% / 1.4 'Roboto', sans-serif;
   background: #991199;
 
+@import '_vars';
+@import '__@Utilities';
+@import '_form';
+@import '_table';
+
 .Page
-  padding: 1em;
+  padding: 6em 1em 1em;
   // background: #991199;
   color: #FFF;
   min-height: 100vh;
@@ -25,6 +30,26 @@
   font-weight: bold;
   font-size: 1.4rem;
 
-@import 'vars';
-@import 'form';
-@import '__@Utilities';
+.Grid
+  display: grid;
+  grid-template-columns: 300px 1fr;
+
+.Main
+  padding: 1em;
+  background: #800080;
+
+  &_body
+    background: #991199;
+    padding: 1em;
+
+.Nav
+  margin: 1em;
+
+  &_item
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 1em;
+
+    &:hover
+      background: #800080;
