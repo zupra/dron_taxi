@@ -8,8 +8,8 @@
 */
 
 <template lang="pug">
-.Page.flex
-  .authorization
+.Page.flex.login
+  //- .authorization
 
   .Logo DRON TAXI
 
@@ -28,15 +28,15 @@
       )
 
     .flex.y_center.my-3
-      span
+      label.flex_1.flex.y_center
         input(
           type="checkbox"
         )
         | Запомнить
 
-      button.btn_blue Войти
-    .flex
-      button.btn_green Регистрация
+      button.flex_1.btn_blue Войти
+    
+    button.w_100.btn_green Регистрация
 
 </template>
 
@@ -44,8 +44,10 @@
 
 
 
+.login
+  background url('~static/img/flying-taxi_clr.jpg') no-repeat center/cover;
 
-
+/*
 .authorization
   position fixed
   z-index -1
@@ -57,10 +59,10 @@
   // mix-blend-mode: overlay;
   // filter: opacity(0.5);
   opacity .5
-
+*/
 
 
 form
-  margin auto 0 auto 2em
+  margin auto 0 auto 10vw
   width 300px
 </style>
