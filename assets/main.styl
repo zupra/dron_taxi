@@ -58,7 +58,17 @@
       display: inline-block;
       width: 2em;
       height: 2em;
-      background: url('~static/icon-svg/manag-user.svg') no-repeat left center;
+      // background-position: left center;
+      // background-repeat: no-repeat;
 
-    &:hover
-      background: #800080;
+    &:nth-of-type(1)
+      background: url('~static/icon-svg/profile.svg') left center no-repeat;
+
+    &:nth-of-type(2)
+      background: url('~static/icon-svg/manag-user.svg') left center no-repeat;
+
+    &:nth-of-type(3)
+      background: url('~static/icon-svg/manag-role.svg') left center no-repeat;
+
+  &:hover
+    background: #800080;
