@@ -1,0 +1,29 @@
+.HERE_tabs
+  // margin-left -1em
+  // margin-top -1em
+  background: #991199;
+//================
+.tab-enter-active
+  transition all .4s ease
+.tab-enter
+  opacity 0
+  transform translateY(10px)
+.tab-enter-to
+  opacity 1
+.tab-leave-active
+  display none
+.tabLabels
+  display flex
+  cursor pointer
+  &_Item
+    // flex 1
+    width 200px
+    text-align center
+    height 2.3em
+    line-height 2.3em
+    font-size 1.2em
+    &.curr
+      background #a55fcf
+
+.TAB
+  padding 2em 1em 1em

@@ -1,86 +1,76 @@
 <template lang="pug">
 div
   h1 Управление пользователями
-  .Main_body
-    .flex
-
-      .flex_col
-        img(
-          style="width: 120px;"
-          :src="require(`~/static/img/clear-prof.png`)"
-        )
-        button.mt-5.btn_blue Обновить
 
 
-      .ml-5
-        label Фамилия
-          input(
-            placeholder="Фамилия"
-          )
+  //- .Main_body
 
-        label Имя
-          input(
-            placeholder="Имя"
-          )
-        label Отчество
-          input(
-            placeholder="Отчество"
-          )
+  .HERE_tabs
+    .tabLabels
+      .tabLabels_Item(
+        v-for="(tab,idx) in ['Список', 'Личные данные', 'Роли']",
+        :class="{curr:idx==TAB}",
+        @click="TAB = idx"
+      ) {{tab}}
 
-        label Дата рождения
-          //- input(
-          //-   type="date"
-          //- )
-          InpDate
+    transition-group(
+      class="TAB_content" name="tab"
+    )
+      .TAB(:key="0" v-show="TAB == 0")
+        .flex.x_sb
+          .flex
 
-        //-
+            img.mr-3(
+              :src="require(`~/static/icon-svg/filter.svg`)"
+            )
 
-        label Пол
-          div
-            //- span
             input(
-              type="checkbox"
-            ) 
-            | M
-            input.ml-4(
-              type="checkbox"
-            ) 
-            | Ж
+              placeholder="Системное имя"
+            )
+            | &emsp;
+            input(
+              placeholder="Наименование"
+            )
 
+          button.btn_blue.flex.y_center
+            img(
+              :src="require(`~/static/icon-svg/add-button.svg`)"
+            )
+            | &nbsp; Добавить
+            //-
+        table.w_100.mt-4
+          tbody
+            tr
+              each _,i in Array(5)
+                th thead_#{i+1}
+            each _,i in Array(10)
+              tr
+                each _,i in Array(5)
+                  if i === 4
+                    td.td_buttonGroup.center
+                      img(
+                        :src="require(`~/static/icon-svg/delete-grin.svg`)"
+                      )
+                  else
+                    td data_#{i+1}
 
-      .ml-5
-        label Email
-          input(
-            placeholder="Email"
-          )
-        label Телефон
-          input(
-            placeholder="Телефон"
-          )
-
-
-        label Пароль
-          input(
-            placeholder="Пароль"
-          )
-
-        label Подтверждение пароля
-          input(
-            placeholder="Подтверждение пароля"
-          )
-
-        .mt-4.flex.x_end
-          button.btn_green Сохранить
-          | &emsp;
-          button.btn_blue Отмена
+      .TAB(:key="1" v-show="TAB == 1")
+        Profile
+      .TAB(:key="2" v-show="TAB == 2")
+        h1 Роли
 
 </template>
 
 <script>
-import InpDate from '~/components/InpDate.vue'
+import Profile from '~/components/Profile.vue'
 export default {
   components: {
-    InpDate,
+    Profile,
+  },
+  data() {
+    return {
+      TAB: 0,
+    }
   },
 }
 </script>

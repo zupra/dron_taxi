@@ -2,9 +2,10 @@
 div
   h1 Профиль
   .Main_body
-    //- h2 Новая поездка
 
-    .flex
+    Profile
+
+    .flex.mt-5
       div
         h2 Мои поездки
         .flex.mt-3
@@ -52,12 +53,16 @@ div
 </template>
 
 <script>
+import Profile from '~/components/Profile.vue'
 const DATA = [
   { name: 'Эконом', val: '1' },
   { name: 'Бизнес', val: '2' },
   { name: 'Премиум', val: '3' },
 ]
 export default {
+  components: {
+    Profile,
+  },
   data() {
     return {
       ARR: DATA,
