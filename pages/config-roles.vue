@@ -26,26 +26,26 @@ div
 
     .flex
 
-      table.my-3
+      table.mt-4.flex_1
         tbody
           tr
             each _,i in Array(5)
               th thead_#{i+1}
-          each _,i in Array(12)
+          each _,i in Array(10)
             tr
               each _,i in Array(5)
                 td data_#{i+1}
 
       .ml-5
 
-        h2.my-2 Роль: Администратор
+        h2.mb-1 Роль: Администратор
         .flex
           label Системное имя
             input(
               placeholder="Админ"
             )
 
-          label.ml-3 Наименование
+          label.ml-4 Наименование
             input(
               placeholder="Администратор"
             )
@@ -53,25 +53,46 @@ div
 
         .flex
           label Дата начала
-            input
+            input(
+              type="date"
+            )
 
-          label.ml-5 Дата окончания 
-            input
+          label.ml-4 Дата окончания 
+            input(
+              type="date"
+            )
 
+        .mt-4.flex.x_sb.y_end
+          h3 Доступный функционал
+          button.btn_blue.flex.y_center
+            img(
+              :src="require(`~/static/icon-svg/add-button.svg`)"
+            )
+            | &nbsp; Добавить
 
-
-        table.my-3
-          thead
-            tr
-              each _,i in Array(3)
-                th thead_#{i+1}
-          tbody
-            each _,i in Array(5)
+        table.mt-3.w_100
+          //-
+            thead
               tr
-                each _,i in Array(3)
-                  td data_#{i+1}
+                each _,i in Array(2)
+                  th thead_#{i+1}
+          tbody
+            each _,i in Array(3)
+              tr
+                each _,i in Array(2)
+                  if ! i
+                    td data_#{i+1}
+                  else
+                    td.td_buttonGroup
+                      img(
+                        :src="require(`~/static/icon-svg/delete-grin.svg`)"
+                      )
 
 
+
+        .flex.mt-3
+          button.btn_green Сохранить
+          button.btn_blue.ml-3 Отмена
 
 </template>
 

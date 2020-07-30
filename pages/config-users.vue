@@ -34,11 +34,18 @@ div
           InpDate
 
         //-
-          .flex
-            label Пол
-              input(
-                type="date"
-              )
+
+        label Пол
+          div
+            //- span
+            input(
+              type="checkbox"
+            ) 
+            | M
+            input.ml-4(
+              type="checkbox"
+            ) 
+            | Ж
 
 
       .ml-5
@@ -62,10 +69,10 @@ div
             placeholder="Подтверждение пароля"
           )
 
-    .mt-3.flex.x_end
-      button.btn_green Сохранить
-      | &emsp;
-      button.btn_blue Отмена
+        .mt-4.flex.x_end
+          button.btn_green Сохранить
+          | &emsp;
+          button.btn_blue Отмена
 
 </template>
 

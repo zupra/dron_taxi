@@ -8,6 +8,7 @@
     .Nav
       N-link.Nav_item(
         v-for="link,idx in NAV"
+        :key="idx"
         :to="`/${link.val}`"
         :class="`i_${idx+1}`"
       ) {{link.name}}

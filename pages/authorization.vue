@@ -42,7 +42,7 @@ export default {
 .Login
   height 100vh
   color #FFF
-  background url('~static/img/flying-taxi_clr.jpg') no-repeat center/cover;
+  background #991199 url('~static/img/flying-taxi_clr.jpg') no-repeat center/cover;
   &_form
     margin auto 0 auto 10vw
     width 300px
