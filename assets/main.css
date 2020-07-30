@@ -344,11 +344,13 @@ button:active:after {
   opacity: 0.2;
   transition: 0s;
 }
-.btn_blue {
+.btn_blue,
+input[type=file] {
   color: #fff;
   background: #0087b4;
 }
-.btn_blue:hover {
+.btn_blue:hover,
+input[type=file]:hover {
   background: #00bfff;
 }
 .btn_green {
