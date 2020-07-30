@@ -382,9 +382,7 @@ label {
   font-size: 12px;
   line-height: 2rem;
 }
-/* select {
-  background: #fff url("data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><polygon points="0,0 12,0 6,12" fill="gainsboro"/></svg>") right no-repeat;
-} */
+
 input[type='checkbox'],
 input[type='radio'] {
   padding: 0;
@@ -396,23 +394,13 @@ input[type='radio'] {
   width: 1.6em !important;
   margin-right: 0.5em;
   background-color: #fff;
+  border-radius: 0.2em;
 }
 input[type='checkbox']:checked,
 input[type='radio']:checked {
+  background: #fff url("~static/icon-svg/input-checkbox-check.svg") no-repeat center;
   animation: bounce 0.3s;
 }
-input[type=checkbox] {
-  border-radius: 0.2em;
-}
-input[type=checkbox]:checked {
-  background: #fff url("~static/icon-svg/input-checkbox-check.svg") no-repeat center;
-}
-input[type=radio] {
-  border-radius: 50%;
-}
-/* input[type=radio]:checked {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="8" r="4" fill="white"/></svg>");
-} */
 @-moz-keyframes bounce {
   0%, 100% {
     transform: scale(1);
