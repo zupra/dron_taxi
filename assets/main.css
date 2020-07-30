@@ -285,6 +285,19 @@
 .y_base {
   align-items: baseline;
 }
+
+.Login {
+	height: 100vh;
+	color: #fff;
+	background: #919 url("~static/img/flying-taxi_clr.jpg") no-repeat center/cover;
+}
+
+.Login_form {
+	margin: auto 0 auto 10vw;
+	width: 300px;
+}
+
+
 input,
 select,
 textarea,
