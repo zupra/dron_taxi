@@ -57,7 +57,59 @@ div
       .TAB(:key="1" v-show="TAB == 1")
         Profile
       .TAB(:key="2" v-show="TAB == 2")
-        h1 Роли
+        .flex
+
+          table.mt-4.flex_1
+            tbody
+              tr
+                each _,i in Array(3)
+                  th thead_#{i+1}
+              each _,i in Array(6)
+                tr
+                  each _,i in Array(3)
+                    if i === 2
+                      td.td_buttonGroup.center
+                        img(
+                          :src="require(`~/static/icon-svg/edit.svg`)"
+                        )
+                    else
+                      td data_#{i+1}
+
+          .ml-5.flex_1
+
+            h2.my-2 Роль: Администратор
+
+            .mt-4.flex.x_sb.y_end
+              h3 Доступный функционал
+              button.btn_blue.flex.y_center
+                img(
+                  :src="require(`~/static/icon-svg/add-button.svg`)"
+                )
+                | &nbsp; Добавить
+
+            table.mt-3.w_100
+              //-
+                thead
+                  tr
+                    each _,i in Array(2)
+                      th thead_#{i+1}
+              tbody
+                each _,i in Array(4)
+                  tr
+                    each _,i in Array(2)
+                      if ! i
+                        td data_#{i+1}
+                      else
+                        td.td_buttonGroup
+                          img(
+                            :src="require(`~/static/icon-svg/delete-grin.svg`)"
+                          )
+
+
+
+            .flex.mt-3
+              button.btn_green Сохранить
+              button.btn_blue.ml-3 Отмена
 
 </template>
 
