@@ -5,7 +5,7 @@
 
 :root
   font: 100% / 1.4 'Roboto', sans-serif;
-  background: #991199;
+
 
 @import '_vars';
 @import '__@Utilities';
@@ -13,62 +13,82 @@
 @import '_chekbox';
 @import '_table';
 
-.Page
-  padding: 6em 1em 1em;
-  // background: #991199;
-  color: #FFF;
-  min-height: 100vh;
-  position: relative;
+.Grid
+  background: #991199;
+  color #FFF
+  //
+  display: grid;
+  height: 100vh;
+  overflow-x: hidden; // for hidden sidebar
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 6em 1fr;
+  grid-template-areas:
+    'header header'\
+    'sidebar main'\
+    'sidebar main';
 
-.Logo
-  position: fixed;
-  left: 1em;
-  top: 1em;
+  a
+    text-decoration none
+    color #FFF
+// Header
+.Header
+  grid-area: header;
+.logo
+  display inline-block
+  text-decoration none
+  color #FFF
+  margin .5em 1em
   background: url('~static/icon-svg/Logo_Dron_Taxi.svg') no-repeat left center;
+  font-size: 1.4rem;
   background-size: 2em;
   line-height: 3em;
   padding-left: 3em;
   font-weight: bold;
-  font-size: 1.4rem;
 
-.Grid
-  display: grid;
-  grid-template-columns: 300px 1fr;
 
+
+// Main
 .Main
-  padding: 1em;
+  scrollableArea()
+
+  grid-area: main;
+  padding: 1em 1.4em;
   background: #800080;
 
   &_body
     background: #991199;
     padding: 1em;
 
-.Nav
-  margin: 1em;
+  h1
+    margin-bottom 1rem
 
+// Sidebar
+.Sidebar
+  grid-area: sidebar;
+  margin: 3em 1.4em 1em;
+
+
+.i_1
+  background-image: url('~static/icon-svg/profile.svg')
+.i_2
+  background-image: url('~static/icon-svg/manag-user.svg')
+.i_3
+  background-image: url('~static/icon-svg/manag-role.svg')
+.i_4
+  background-image: url('~static/icon-svg/exit.svg')
+.Nav
   &_item
-    cursor: pointer;
+    user-select none
+    cursor pointer
     height: 40px;
     line-height: 40px;
-    padding-left: 1em;
-    display: flex;
+    padding-left: 3em;
+    display: block;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    &:hover
+      border-bottom 2px solid #7FFF7F
+    &.nuxt-link-exact-active
+      background-color: #800080;
 
-    &:before
-      content: '';
-      display: inline-block;
-      width: 2em;
-      height: 2em;
-      // background-position: left center;
-      // background-repeat: no-repeat;
 
-    &:nth-of-type(1)
-      background: url('~static/icon-svg/profile.svg') left center no-repeat;
-
-    &:nth-of-type(2)
-      background: url('~static/icon-svg/manag-user.svg') left center no-repeat;
-
-    &:nth-of-type(3)
-      background: url('~static/icon-svg/manag-role.svg') left center no-repeat;
-
-  &:hover
-    background: #800080;

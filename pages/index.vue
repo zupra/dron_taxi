@@ -2,7 +2,7 @@
 .Index.p-5
 
   #palette
-    each clr in ['#00BFFF','#0087B4', '#7FFF7FD9', '#7FFF7F', '#128312', '#202020', '#D1D9D1', '#747272', '#800080', '#991199', '#973E95', '#AD66A9', '#CEC8C8', '#747272' ]
+    each clr in ['#00BFFF','#0087B4', '#7FFF7FD9', '#7FFF7F', '#128312', '#202020', '#D1D9D1', '#747272', '#660066','#800080', '#991199', '#973E95', '#AD66A9', '#CEC8C8', '#747272' ]
       figure
         div(
           style="background-color:"+clr
@@ -39,12 +39,13 @@ const DATA = [
   // 'config-users-modify',
   // 'config-users-role',
   'config-users',
-  'profile-edit',
+  // 'profile-edit',
   'profile',
-  'user-role',
+  // 'user-role',
   'web-my-orders',
 ]
 export default {
+  layout: 'blank',
   data() {
     return {
       ARR: DATA,

@@ -1,71 +1,79 @@
 <template lang="pug">
-.Page
-  .Logo DRON TAXI
+div
+  h1 Управление пользователями
+  .Main_body
+    .flex
 
-  .Grid
-    .Nav
-      .Nav_item(
-        v-for="item in ['Профиль', 'Упр. пользователями', 'Упр. ролями']"
-      ) {{item}}
-      
-
-    .Main
-      h1 Мой профиль
-
-      .Main_body
-
-        .flex
-
-          div
-            img(
-              style="width: 120px;"
-              :src="require(`~/static/img/clear-prof.png`)"
-            )
+      .flex_col
+        img(
+          style="width: 120px;"
+          :src="require(`~/static/img/clear-prof.png`)"
+        )
+        button.mt-5.btn_blue Обновить
 
 
-          .ml-4
+      .ml-5
+        label Фамилия
+          input(
+            placeholder="Фамилия"
+          )
 
-            label Фамилия
+        label Имя
+          input(
+            placeholder="Имя"
+          )
+        label Отчество
+          input(
+            placeholder="Отчество"
+          )
+
+        label Дата рождения
+          //- input(
+          //-   type="date"
+          //- )
+          InpDate
+
+        //-
+          .flex
+            label Пол
               input(
-                placeholder="Фамилия"
-              )
-
-            label Имя
-              input(
-                placeholder="Имя"
-              )
-
-            label Отчество
-              input(
-                placeholder="Отчество"
-              )
-
-          .ml-4
-            label Email
-              input(
-                placeholder="Email"
-              )
-
-            label Телефон
-              input(
-                placeholder="Телефон"
+                type="date"
               )
 
 
-            label Пароль
-              input(
-                placeholder="Пароль"
-              )
+      .ml-5
+        label Email
+          input(
+            placeholder="Email"
+          )
+        label Телефон
+          input(
+            placeholder="Телефон"
+          )
 
-            label Подтверждение пароля
-              input(
-                placeholder="Подтверждение пароля"
-              )
 
-        br
-        br
-        button.btn_green Сохранить
-        | &emsp;
-        button.btn_green Отмена
+        label Пароль
+          input(
+            placeholder="Пароль"
+          )
+
+        label Подтверждение пароля
+          input(
+            placeholder="Подтверждение пароля"
+          )
+
+    .mt-3.flex.x_end
+      button.btn_green Сохранить
+      | &emsp;
+      button.btn_blue Отмена
 
 </template>
+
+<script>
+import InpDate from '~/components/InpDate.vue'
+export default {
+  components: {
+    InpDate,
+  },
+}
+</script>
