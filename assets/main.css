@@ -369,9 +369,9 @@ label {
   font-size: 12px;
   line-height: 2rem;
 }
-select {
+/* select {
   background: #fff url("data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><polygon points="0,0 12,0 6,12" fill="gainsboro"/></svg>") right no-repeat;
-}
+} */
 input[type='checkbox'],
 input[type='radio'] {
   padding: 0;
@@ -397,9 +397,9 @@ input[type=checkbox]:checked {
 input[type=radio] {
   border-radius: 50%;
 }
-input[type=radio]:checked {
+/* input[type=radio]:checked {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="8" r="4" fill="white"/></svg>");
-}
+} */
 @-moz-keyframes bounce {
   0%, 100% {
     transform: scale(1);
@@ -466,7 +466,7 @@ th {
 }
 .table_col td,
 .table_col th {
-  border-right: 1px solid $border;
+  border-right: 1px solid #CCC;
 }
 .table_col td:last-child,
 .table_col th:last-child {
@@ -489,7 +489,7 @@ th {
 }
 .border td,
 .border th {
-  border: 1px solid $border;
+  border: 1px solid #CCC;
 }
 .HERE_tabs {
   background: #919;
