@@ -11,6 +11,14 @@
 
   hr
   h2 Кнопки
+  label.custom-file-upload(
+    for="file-upload"
+  ) File Upload
+  input(
+    id="file-upload" 
+    type="file"
+  )
+  button.btn_blue Отмена
   hr
   h2 Поля ввода
   hr
@@ -69,4 +77,25 @@ export default {
   div
     width 5em
     height 4em
+
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  color: #fff;
+  background: #0087b4;
+  display: inline-block;
+  border: 2px solid #FFF;
+  padding: 6px 12px;
+  cursor: pointer;
+  padding: 0 1em;
+  height: 40px;
+  line-height 36px
+  font-size: 14px;
+  border-radius: 5px;
+}
+.custom-file-upload:hover {
+  background: #00bfff;
+}
 </style>
